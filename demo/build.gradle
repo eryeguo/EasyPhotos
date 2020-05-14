@@ -33,10 +33,7 @@ dependencies {
 
     implementation project(':easyPhotos')
 
-    implementation("com.github.bumptech.glide:glide:4.5.0") {
-        exclude group: "com.android.support"
-    }
-    annotationProcessor 'com.github.bumptech.glide:compiler:4.5.0'
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
     //检测内存泄漏
     debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.5.4'
     releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'

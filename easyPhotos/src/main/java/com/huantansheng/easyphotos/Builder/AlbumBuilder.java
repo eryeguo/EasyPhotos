@@ -7,6 +7,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.view.View;
 
+import com.huantansheng.easyphotos.GlideEngine;
 import com.huantansheng.easyphotos.callback.SelectCallback;
 import com.huantansheng.easyphotos.constant.Type;
 import com.huantansheng.easyphotos.engine.ImageEngine;
@@ -136,9 +137,7 @@ public class AlbumBuilder {
      */
     @Deprecated
     public static AlbumBuilder createAlbum(Activity activity, boolean isShowCamera, @NonNull ImageEngine imageEngine) {
-        if (Setting.imageEngine != imageEngine) {
-            Setting.imageEngine = imageEngine;
-        }
+            Setting.imageEngine =  GlideEngine.getInstance();
         if (isShowCamera) {
             return AlbumBuilder.with(activity, StartupType.ALBUM_CAMERA);
         } else {
@@ -159,9 +158,7 @@ public class AlbumBuilder {
     }
 
     public static AlbumBuilder createAlbum(FragmentActivity activity, boolean isShowCamera, @NonNull ImageEngine imageEngine) {
-        if (Setting.imageEngine != imageEngine) {
-            Setting.imageEngine = imageEngine;
-        }
+            Setting.imageEngine = GlideEngine.getInstance();
         if (isShowCamera) {
             return AlbumBuilder.with(activity, StartupType.ALBUM_CAMERA);
         } else {

@@ -234,7 +234,7 @@ public class SampleActivity extends AppCompatActivity
                 break;
 
             case R.id.album_has_video_gif://相册中显示视频和gif图
-                EasyPhotos.createAlbum(this, true, GlideEngine.getInstance())
+                EasyPhotos.createAlbum(this, true, null)
                         .setFileProviderAuthority("com.huantansheng.easyphotos.demo.fileprovider")
                         .setCount(9)
                         .setPictureCount(9)
